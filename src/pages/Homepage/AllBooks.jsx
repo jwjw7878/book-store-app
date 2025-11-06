@@ -7,7 +7,7 @@ import "./AllBooks.style.css";
 import bookStore from "../../store/bookStore";
 
 const AllBooks = () => {
-  const { toggleList } = bookStore();
+  const { toggleList, list } = bookStore();
   const getfetchBooks = async () => {
     return axios.get("https://openlibrary.org/subjects/love.json");
   };
@@ -41,7 +41,12 @@ const AllBooks = () => {
             <p className="book-title">{book?.title}</p>
             <p className="book-author">{book?.authors[0].name}</p>
             {/* <FaHeart className="heart" /> */}
-            <CiHeart className="heart" onClick={() => toggleList(book)} />
+            <CiHeart
+              className={
+                list.some((li) => li.key === book.key) ? "heart red" : "heart"
+              }
+              onClick={() => toggleList(book)}
+            />
           </div>
         ))}
       </div>
