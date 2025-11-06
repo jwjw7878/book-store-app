@@ -18,7 +18,12 @@ const MyBooks = () => {
             <p className="book-title">{book?.title}</p>
             <p className="book-author">{book?.authors[0].name}</p>
             {/* <FaHeart className="heart" /> */}
-            <CiHeart className="heart" onClick={() => toggleList(book)} />
+            <CiHeart
+              className={
+                list.some((li) => li.key === book.key) ? "heart red" : "heart"
+              }
+              onClick={() => toggleList(book)}
+            />
           </div>
         ))}
       </div>
