@@ -1,0 +1,35 @@
+h1 {
+  text-align: center;
+  margin: 50px 0;
+}
+.form {
+  width: 40%;
+  border-radius: 20px;
+  padding: 150px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border: 2px solid black;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.form p {
+  margin: 20px 0;
+  width: 40%;
+  justify-content: space-between;
+  display: flex;
+}
+.form input {
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+button {
+  padding: 20px 30px;
+  background-color: black;
+  color: white;
+}
