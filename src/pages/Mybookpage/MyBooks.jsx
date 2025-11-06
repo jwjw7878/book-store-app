@@ -1,5 +1,6 @@
 import React from "react";
 import bookStore from "../../store/bookStore";
+import { CiHeart } from "react-icons/ci";
 
 const MyBooks = () => {
   const { list, toggleList } = bookStore();
